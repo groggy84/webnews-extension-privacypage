@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>개인정보처리방침 — WebNews Tool Ext</title>
+  <meta name="description" content="WebNews Tool Ext 크롬 확장프로그램의 개인정보처리방침">
+  <style>
+    :root {
+      --text: #1f2937;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --bg: #ffffff;
+      --bg-alt: #f9fafb;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --code-bg: #f3f4f6;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 12px;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 40px 0 12px;
+      padding-top: 8px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    p { margin: 12px 0; color: var(--text-secondary); }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .meta strong { color: var(--text-secondary); font-weight: 600; }
+    .lead {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--primary);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--bg-alt);
+      font-weight: 600;
+      color: var(--text);
+    }
+    td:first-child { white-space: nowrap; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #b91c1c;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+    ul { padding-left: 24px; color: var(--text-secondary); }
+    li { margin: 6px 0; }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      main { padding: 32px 16px 64px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+      table { font-size: 13px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>개인정보처리방침</h1>
+    <div class="meta">
+      <span><strong>확장프로그램명:</strong> WebNews Tool Ext</span>
+      <span><strong>제공자:</strong> 사내</span>
+      <span><strong>최종 업데이트:</strong> 2026-05-15</span>
+    </div>
+  </header>
+
+  <p>본 개인정보처리방침은 WebNews Tool Ext (이하 “본 확장프로그램”)가 어떤 정보를 수집·저장·이용하는지를 설명합니다.</p>
+
+  <h2>1. 수집·저장하는 정보</h2>
+  <p>본 확장프로그램은 사용자의 로컬 브라우저 저장소(<code>chrome.storage.local</code>)에 다음 정보를 저장합니다.</p>
+  <div class="lead">모든 데이터는 사용자의 브라우저에만 저장되며, 본 확장프로그램 운영자의 외부 서버로 전송되지 않습니다.</div>
+
+  <table>
+    <thead>
+      <tr><th>항목</th><th>용도</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>LDAP ID</strong> (작업자 ID)</td><td>사용자가 작성한 모니터링 결과를 Google Sheets에 기록할 때 식별자로 사용</td></tr>
+      <tr><td><strong>검색 키워드 기록</strong><br><code>keyword1History</code>, <code>keyword2History</code>, <code>keyword3History</code>, <code>searchHistory</code></td><td>최근 10일간의 검색 이력 자동 저장</td></tr>
+      <tr><td><strong>Google Apps Script URL</strong><br><code>gasTab1</code>, <code>gasTab2</code>, <code>gasTab3</code>, <code>gasExport</code></td><td>사용자가 설정한 GAS 엔드포인트</td></tr>
+      <tr><td><strong>언론사·프로그램·카테고리 데이터</strong><br><code>mediaListData</code>, <code>programsListData</code>, <code>tab2CategoriesData</code></td><td>GAS로부터 받은 모니터링 기준 데이터의 로컬 캐시</td></tr>
+      <tr><td><strong>하이라이트 설정</strong><br><code>highlightGroups</code>, <code>highlightRegEx</code></td><td>사용자 정의 키워드/정규식 강조 규칙</td></tr>
+      <tr><td><strong>광고 차단 토글 상태</strong> (<code>adblockEnabled</code>)</td><td>광고 차단 기능 On/Off 상태</td></tr>
+      <tr><td><strong>현재 활성 탭</strong> (<code>activeTab</code>)</td><td>UI 상태 복원용</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 정보의 전송 (Data Transmission)</h2>
+  <p>본 확장프로그램은 사용자가 직접 설정한 <strong>Google Apps Script 엔드포인트</strong>로만 데이터를 전송합니다.</p>
+  <ul>
+    <li><strong>수신 측:</strong> 사용자(또는 사용자가 속한 조직)가 직접 배포한 Google Apps Script Web App</li>
+    <li><strong>전송 데이터:</strong>
+      <ul>
+        <li>사용자가 모니터링 중 선정한 뉴스 기사 정보 (제목, 언론사, URL, 게시일 등)</li>
+        <li>작업자 LDAP ID</li>
+      </ul>
+    </li>
+    <li><strong>목적:</strong> 선정된 기사를 Google Sheets에 기록하기 위함</li>
+    <li><strong>제3자 전송 없음:</strong> 본 확장프로그램 운영자 또는 그 외 제3자에게 데이터를 전송하지 않습니다.</li>
+  </ul>
+  <p>본 확장프로그램은 사용자가 방문한 웹페이지의 내용을 외부로 전송하지 않습니다. 페이지 내 광고 차단 및 키워드 하이라이트는 모두 로컬에서 수행됩니다.</p>
+
+  <h2>3. 권한 사용 사유</h2>
+  <table>
+    <thead>
+      <tr><th>권한</th><th>사유</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>storage</code></td><td>사용자 설정 및 검색 기록 로컬 저장</td></tr>
+      <tr><td><code>tabs</code></td><td>다중 검색 자동화 시 탭 열기/닫기</td></tr>
+      <tr><td><code>activeTab</code></td><td>현재 탭의 URL 파악 (검색 결과 페이지 식별)</td></tr>
+      <tr><td><code>sidePanel</code></td><td>사이드패널 UI 제공</td></tr>
+      <tr><td><code>declarativeNetRequest</code></td><td>광고 차단 (네트워크 요청 차단 규칙)</td></tr>
+      <tr><td><code>host_permissions: search.daum.net</code></td><td>다음 뉴스 검색 결과 페이지에 체크박스 UI 주입</td></tr>
+      <tr><td><code>host_permissions: v.daum.net</code></td><td>다음 뉴스 상세 페이지 처리</td></tr>
+      <tr><td><code>host_permissions: script.google.com</code></td><td>사용자가 설정한 GAS 엔드포인트 호출</td></tr>
+      <tr><td><code>content_scripts</code> (http/https)</td><td>다음 검색결과에서 클릭한 외부 언론사 기사 페이지에서 광고 차단 CSS 및 정보 하이라이트 적용</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. 데이터 보관 및 삭제</h2>
+  <ul>
+    <li><strong>보관 위치:</strong> 사용자의 로컬 Chrome 브라우저 (<code>chrome.storage.local</code>)</li>
+    <li><strong>보관 기간:</strong> 사용자가 확장프로그램을 삭제할 때까지</li>
+    <li><strong>삭제 방법:</strong> <code>chrome://extensions</code>에서 본 확장프로그램을 제거하면 모든 로컬 데이터가 함께 삭제됩니다.</li>
+  </ul>
+
+  <h2>5. 개인정보 보호 관련 문의</h2>
+  <p>본 개인정보처리방침에 관한 문의는 사내 담당자에게 사내 채널을 통해 연락 바랍니다.</p>
+
+  <h2>6. 변경 사항</h2>
+  <p>본 방침이 변경될 경우, 본 문서를 통해 고지됩니다.</p>
+
+  <footer>
+    © WebNews Tool Ext Privacy Policy
+  </footer>
+</main>
+</body>
+</html>
