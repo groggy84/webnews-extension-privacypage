@@ -1,4 +1,4 @@
-# webnews-extension-privacy
+# webnews-extension-privacypage
 
 WebNews Tool Ext 크롬 확장프로그램의 **개인정보처리방침(Privacy Policy)** 호스팅 저장소입니다.
 
@@ -7,7 +7,7 @@ WebNews Tool Ext 크롬 확장프로그램의 **개인정보처리방침(Privacy
 GitHub Pages 활성화 후 다음 주소에서 확인할 수 있습니다:
 
 ```
-https://<github-username>.github.io/webnews-extension-privacy/
+https://groggy84.github.io/webnews-extension-privacypage/
 ```
 
 ## 용도
